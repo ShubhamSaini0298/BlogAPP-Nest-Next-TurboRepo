@@ -33,6 +33,14 @@
 
  As of now we not generate the prisma client but all other thing we add related to prisma
 
+========================  SEEDING ========================
+Seed means we create a random data into database in initial our databse is empty so it not been empty it have default data 
+that why we make seed.
+for random data or fake data we need to install the package  in apps/api 
+npm i @faker-js/faker
+
+npm run db:seed   to generate the Seeding file of fake data 
+
 
 
 
