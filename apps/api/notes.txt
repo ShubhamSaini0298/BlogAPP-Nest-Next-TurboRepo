@@ -1,0 +1,38 @@
+
+============================= INTEGRATING PRISMA =========================
+1) npm i -D Prisma    
+    Install the prisma in dev dependency
+
+2) npx prisma init --datasource-provider sqlite
+    It create a folder name prisma and in which have file schema.prisma
+
+    schema.prisma -> file
+    generator client {
+        provider = "prisma-client"
+        output   = "../generated/prisma"
+    }
+
+    datasource db {
+         provider = "sqlite"
+    }
+
+    .env   ---> environment file that create with schema.prisma and in that have url of database
+    DATABASE_URL="file:./dev.db"
+
+====  Eraser AI -> www.app.eraser.io -> is used to create a design for data model like the figma 
+
+3) After create model we migrate the prisma
+    npx prisma migrate dev --name init
+
+ now if we show the prisma design we use the
+ npx prisma studio but for this we need to install better-sqlite3
+
+ npm install better-sqlite3
+ npx prisma studio
+
+
+ As of now we not generate the prisma client but all other thing we add related to prisma
+
+
+
+
